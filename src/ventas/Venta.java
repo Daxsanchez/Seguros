@@ -90,8 +90,9 @@ public class Venta {
         return cliente.calcDescuento(seguro.getPrecio());
     }
     
-    public Double calcDeducible(){
-        return cliente.calcDescuento(deducible);
+    public Double calcPagoAseguradora(){
+        double costo = seguro.getMontoAsegurado() - deducible;
+        return costo;
     }
 
     @Override
