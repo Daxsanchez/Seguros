@@ -35,7 +35,7 @@ public abstract class Cliente extends Persona {
         return sb.toString();
     }
 
-    public double getTipoCliente(double deducible) {
+    public double calcDeducible(double deducible) {
         //Nuevo
         if (antiguedad < 5) {
             deducible += (deducible * 0.05);

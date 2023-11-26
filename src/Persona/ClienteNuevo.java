@@ -38,7 +38,7 @@ public class ClienteNuevo extends Cliente {
     }
 
     @Override
-    public double getTipoCliente(double deducible) {
+    public double calcDeducible(double deducible) {
         char tipoCliente='Z';
         if (getAntiguedad() < 5) {
             tipoCliente = 'N';
