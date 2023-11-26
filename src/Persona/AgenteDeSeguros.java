@@ -41,8 +41,8 @@ public class AgenteDeSeguros extends Empleado {
     public String toString() {
         StringBuilder sb = new StringBuilder("Agente De seguros").append("\n");
         sb.append(super.toString()).append("\n");
-        sb.append("comision=").append(comision).append("\n");
-        sb.append(", numVentas=").append(numVentas).append("\n");
+        sb.append("Comisión: ").append(comision).append("\n");
+        sb.append("Numero de ventas: ").append(numVentas).append("\n");
         return sb.toString();
     }
 
