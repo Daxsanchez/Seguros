@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Persona;
 
 /**
@@ -9,7 +5,7 @@ package Persona;
  * @author rafae
  */
 //Clase Padre extendera a Cliente y Persona
-public class Persona {
+public abstract class Persona {
 
     private String nombre;
     private String apellido;
