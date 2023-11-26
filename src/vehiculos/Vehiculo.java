@@ -97,4 +97,18 @@ public class Vehiculo {
         return sb.toString();
     }
 
+    public void obtenerInformacion() {
+        String info = "Información del vehiculo: \nPlaca: " + placa + "\nModelo: " + modelo;
+        System.out.println(info);
+    }
+
+    // Método sobrecargado para obtener información detallada del vehículo
+    public void obtenerInformacion(boolean detallada) {
+        obtenerInformacion();
+
+        if (detallada) {
+            System.out.println("Detalles adicionales:\n" + toString());
+        }
+    }
+
 }
