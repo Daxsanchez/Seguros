@@ -68,7 +68,7 @@ public abstract class Seguro {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Seguro:").append("\n");
+        sb.append("Seguro " + tipo + " :").append("\n");
         sb.append("Número de póliza: ").append(numPoliza).append("\n");
         sb.append("Fecha inicio: ").append(fechaInicio).append("\n");
         sb.append("Fecha vencimiento: ").append(fechaVencimiento).append("\n");
