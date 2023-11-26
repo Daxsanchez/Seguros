@@ -11,8 +11,9 @@ public class SeguroRobo extends Seguro {
 
     private int tiempoRobo;//En horas
 
-    public SeguroRobo(int tiempoRobo, String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion) {
-        super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion);
+    public SeguroRobo(int tiempoRobo, String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion,
+            Double precio, Double montoAsegurado) {
+        super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion, precio, montoAsegurado);
         this.tiempoRobo = tiempoRobo;
     }
 

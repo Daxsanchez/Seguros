@@ -11,8 +11,9 @@ public class SeguroColision extends Seguro {
 
     private int gravedad;
 
-    public SeguroColision(int gravedad, String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion) {
-        super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion);
+    public SeguroColision(int gravedad, String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion,
+            Double precio, Double montoAsegurado) {
+        super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion, precio, montoAsegurado);
         this.gravedad = gravedad;
     }
 
@@ -36,7 +37,5 @@ public class SeguroColision extends Seguro {
         sb.append("Gravedad: ").append(gravedad).append("\n");
         return sb.toString();
     }
-    
-    
 
 }

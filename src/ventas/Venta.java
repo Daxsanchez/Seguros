@@ -16,19 +16,16 @@ public class Venta {
     private Cliente cliente;
     private Empleado empleado;
     private String vehiculo;
-    private Double montoAsegurado;//Monto máximo que pagará la aseguradora
-    private Double prima; //Costo total de la poliza del seguro
     private Double deducible; // Lo que debe pagar el cliente
     private Seguro seguro;
 
-    public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, String vehiculo, Double montoAsegurado, Double prima, Double deducible, Seguro seguro) {
+    public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, String vehiculo, 
+            Double deducible, Seguro seguro) {
         this.numPoliza = numPoliza;
         this.fechaVenta = fechaVenta;
         this.cliente = cliente;
         this.empleado = empleado;
         this.vehiculo = vehiculo;
-        this.montoAsegurado = montoAsegurado;
-        this.prima = prima;
         this.deducible = deducible;
         this.seguro = seguro;
     }
@@ -72,23 +69,7 @@ public class Venta {
     public void setVehiculo(String vehiculo) {
         this.vehiculo = vehiculo;
     }
-
-    public Double getMontoAsegurado() {
-        return montoAsegurado;
-    }
-
-    public void setMontoAsegurado(Double montoAsegurado) {
-        this.montoAsegurado = montoAsegurado;
-    }
-
-    public Double getPrima() {
-        return prima;
-    }
-
-    public void setPrima(Double prima) {
-        this.prima = prima;
-    }
-
+    
     public Double getDeducible() {
         return deducible;
     }
@@ -114,8 +95,6 @@ public class Venta {
         sb.append("Cliente: ").append(cliente.toString()).append("\n");
         sb.append("Empleado: ").append(empleado.toString()).append("\n");
         sb.append("Vehiculo: ").append(vehiculo).append("\n");
-        sb.append("Monto asegurado: ").append(montoAsegurado).append("\n");
-        sb.append("Prima: ").append(prima).append("\n");
         sb.append("Deducible: ").append(deducible).append("\n");
         sb.append("Seguro: ").append(seguro.toString()).append("\n");
         return sb.toString();
