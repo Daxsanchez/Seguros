@@ -4,7 +4,7 @@ package Persona;
  *
  * @author Dax Sánchez
  */
-public class Empleado extends Persona {
+public abstract class Empleado extends Persona {
     
     private int id;
     private String puesto;

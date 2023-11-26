@@ -10,7 +10,7 @@ import leer.Leer;
  *
  * @author rafae
  */
-public class ClienteFrecuente extends Cliente implements ClienteInterfaz {
+public class ClienteFrecuente extends Cliente {
 
     public ClienteFrecuente(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
@@ -39,7 +39,7 @@ public class ClienteFrecuente extends Cliente implements ClienteInterfaz {
     }
 
     @Override
-    public char getTipoCliente() {
+    public double getTipoCliente(double deducible) {
         char tipoCliente = 'Z';
         if (getAntiguedad() > 4 && getAntiguedad() < 10) {
             tipoCliente = 'F';

@@ -10,7 +10,7 @@ import leer.Leer;
  *
  * @author rafae
  */
-public class ClienteNuevo extends Cliente implements ClienteInterfaz {
+public class ClienteNuevo extends Cliente {
 
     public ClienteNuevo(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
@@ -38,13 +38,13 @@ public class ClienteNuevo extends Cliente implements ClienteInterfaz {
     }
 
     @Override
-    public char getTipoCliente() {
+    public double getTipoCliente(double deducible) {
         char tipoCliente='Z';
         if (getAntiguedad() < 5) {
             tipoCliente = 'N';
- 
         }
         return tipoCliente;
     }
+    
 
 }

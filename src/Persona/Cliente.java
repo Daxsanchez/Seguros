@@ -15,7 +15,7 @@ public abstract class Cliente extends Persona {
     public Cliente(String nombre, String apellido, String numTelefonon, int antiguedad) {
 
         super(nombre, apellido, numTelefonon);
-        this.antiguedad =antiguedad;
+        this.antiguedad = antiguedad;
     }
 
     public int getAntiguedad() {
@@ -25,8 +25,6 @@ public abstract class Cliente extends Persona {
     public void setAntiguedad(int antiguedad) {
         this.antiguedad = antiguedad;
     }
-    
-    
 
     @Override
     public String toString() {
@@ -35,6 +33,20 @@ public abstract class Cliente extends Persona {
         sb.append("Antiguedad: ").append(antiguedad).append("\n");
         sb.append(super.toString()).append("\n");
         return sb.toString();
+    }
+
+    public double getTipoCliente(double deducible) {
+        //Nuevo
+        if (antiguedad < 5) {
+            deducible += (deducible * 0.05);
+            //Frecuente
+        } else if (antiguedad > 4 && antiguedad < 10) {
+            deducible += (deducible * 0.1);
+            //Leal
+        } else if (antiguedad >= 10) {
+            deducible += (deducible * 0.2);
+        }
+        return deducible;
     }
 
     public abstract String getData();

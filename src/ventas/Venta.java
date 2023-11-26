@@ -16,9 +16,9 @@ public class Venta {
     private Cliente cliente;
     private Empleado empleado;
     private String vehiculo;
-    private Double montoAsegurado;
-    private Double prima;
-    private Double deducible;
+    private Double montoAsegurado;//Monto máximo que pagará la aseguradora
+    private Double prima; //Costo total de la poliza del seguro
+    private Double deducible; // Lo que debe pagar el cliente
     private Seguro seguro;
 
     public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, String vehiculo, Double montoAsegurado, Double prima, Double deducible, Seguro seguro) {
