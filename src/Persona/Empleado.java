@@ -2,7 +2,7 @@ package Persona;
 
 /**
  *
- * @author Dax Sánchez
+ * @author rafae
  */
 public abstract class Empleado extends Persona {
     
@@ -50,5 +50,9 @@ public abstract class Empleado extends Persona {
         sb.append("Salario: ").append(salario).append("\n");
         return sb.toString();
     }
+    
+    
+    public abstract double calcSueldo();
+    public abstract String getData();
     
 }
