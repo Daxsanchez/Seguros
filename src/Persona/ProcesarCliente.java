@@ -15,7 +15,7 @@ public class ProcesarCliente {
     public void MostrarCliente(Cliente[] cliente) {
         for (Cliente d : cliente) {
             Leer.showDatos(d.getData());
-            Leer.showDatos(d.calcDescuento(3)+"");
+            Leer.showDatos(d.calcDescuento(3) + "");
 
         }
 

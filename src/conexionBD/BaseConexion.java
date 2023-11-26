@@ -33,6 +33,8 @@ public class BaseConexion {
         } catch (NullPointerException ex) {
             Leer.showDatos("Se está pasando un objeto nulo");
             ex.printStackTrace();
+        }finally{
+            Leer.showDatos("Intente más tarde");
         }
 
     }
