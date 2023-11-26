@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Persona;
 
 import leer.Leer;
@@ -36,15 +32,5 @@ public class ClienteNuevo extends Cliente {
         }
 
     }
-
-    @Override
-    public double calcDeducible(double deducible) {
-        char tipoCliente='Z';
-        if (getAntiguedad() < 5) {
-            tipoCliente = 'N';
-        }
-        return tipoCliente;
-    }
-    
 
 }

@@ -19,7 +19,7 @@ public class Venta {
     private Double deducible; // Lo que debe pagar el cliente
     private Seguro seguro;
 
-    public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, String vehiculo, 
+    public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, String vehiculo,
             Double deducible, Seguro seguro) {
         this.numPoliza = numPoliza;
         this.fechaVenta = fechaVenta;
@@ -69,7 +69,7 @@ public class Venta {
     public void setVehiculo(String vehiculo) {
         this.vehiculo = vehiculo;
     }
-    
+
     public Double getDeducible() {
         return deducible;
     }
@@ -84,6 +84,14 @@ public class Venta {
 
     public void setSeguro(Seguro seguro) {
         this.seguro = seguro;
+    }
+
+    public Double calcVenta() {
+        return cliente.calcDescuento(seguro.getPrecio());
+    }
+    
+    public Double calcDeducible(){
+        return cliente.calcDescuento(deducible);
     }
 
     @Override

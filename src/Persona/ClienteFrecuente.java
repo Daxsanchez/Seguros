@@ -37,14 +37,4 @@ public class ClienteFrecuente extends Cliente {
         }
 
     }
-
-    @Override
-    public double calcDeducible(double deducible) {
-        char tipoCliente = 'Z';
-        if (getAntiguedad() > 4 && getAntiguedad() < 10) {
-            tipoCliente = 'F';
-
-        }
-        return tipoCliente;
-    }
 }

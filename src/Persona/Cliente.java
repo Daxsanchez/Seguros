@@ -35,18 +35,18 @@ public abstract class Cliente extends Persona {
         return sb.toString();
     }
 
-    public double calcDeducible(double deducible) {
+    public double calcDescuento(double descuento) {
         //Nuevo
         if (antiguedad < 5) {
-            deducible += (deducible * 0.05);
+            descuento += (descuento * 0.05);
             //Frecuente
         } else if (antiguedad > 4 && antiguedad < 10) {
-            deducible += (deducible * 0.1);
+            descuento += (descuento * 0.1);
             //Leal
         } else if (antiguedad >= 10) {
-            deducible += (deducible * 0.2);
+            descuento += (descuento * 0.2);
         }
-        return deducible;
+        return descuento;
     }
 
     public abstract String getData();
