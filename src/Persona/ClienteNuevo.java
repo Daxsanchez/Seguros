@@ -10,7 +10,7 @@ import leer.Leer;
  *
  * @author rafae
  */
-public class ClienteNuevo extends Cliente {
+public class ClienteNuevo extends Cliente implements ClienteInterfaz {
 
     public ClienteNuevo(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
@@ -28,12 +28,23 @@ public class ClienteNuevo extends Cliente {
         return toString();
 
     }
+
     //Condicion Cliente Nuevo menor a 5 años
     private void tipoCliente(int antiguedad) {
         if (antiguedad < 5) {
-         Leer.showDatos("Este es un tipo De cliente nuevo por tener"+getAntiguedad() +"de antiguedad" + "\n");
+            Leer.showDatos("Este es un tipo De cliente nuevo por tener" + getAntiguedad() + "de antiguedad" + "\n");
         }
 
+    }
+
+    @Override
+    public char getTipoCliente() {
+        char tipoCliente='Z';
+        if (getAntiguedad() < 5) {
+            tipoCliente = 'N';
+ 
+        }
+        return tipoCliente;
     }
 
 }

@@ -10,7 +10,7 @@ import leer.Leer;
  *
  * @author rafae
  */
-public class ClienteFrecuente extends Cliente {
+public class ClienteFrecuente extends Cliente implements ClienteInterfaz {
 
     public ClienteFrecuente(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
@@ -28,7 +28,6 @@ public class ClienteFrecuente extends Cliente {
         return toString();
     }
 
-    
     //Condicion Cliente Frecuente por tener de 4 a 9 años
     private void tipoCliente(int antiguedad) {
         if (antiguedad > 4 && antiguedad < 10) {
@@ -37,5 +36,15 @@ public class ClienteFrecuente extends Cliente {
 
         }
 
+    }
+
+    @Override
+    public char getTipoCliente() {
+        char tipoCliente = 'Z';
+        if (getAntiguedad() > 4 && getAntiguedad() < 10) {
+            tipoCliente = 'F';
+
+        }
+        return tipoCliente;
     }
 }
