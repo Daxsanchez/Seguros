@@ -10,30 +10,31 @@ import leer.Leer;
  *
  * @author rafae
  */
-public class ClienteNuevo extends Cliente {
+public class ClienteLeal extends Cliente {
 
-    public ClienteNuevo(String nombre, String apellido, String numTelefonon, int antiguedad) {
+    public ClienteLeal(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Cliente Nuevo").append("\n");
-        sb.append(super.toString()).append("\n");
+        StringBuilder sb = new StringBuilder("Cliente Leal").append("\n");
+        sb.append(super.toString());
         return sb.toString();
     }
 
+    @Override
     public String getData() {
-        tipoCliente(super.getAntiguedad());
+        tipoCliente(getAntiguedad());
         return toString();
 
     }
 
     private void tipoCliente(int antiguedad) {
-        if (antiguedad < 5) {
-         Leer.showDatos("Este es un tipo De cliente nuevo por tener"+getAntiguedad() +"de antiguedad" + "\n");
+        if (antiguedad > 10) {
+            Leer.showDatos("Este es un tipo De cliente leal por tener" + getAntiguedad() + "de antiguedad" + "\n");
+
         }
 
     }
-
 }
