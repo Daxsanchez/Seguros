@@ -28,7 +28,7 @@ public class ClienteNuevo extends Cliente {
         return toString();
 
     }
-
+    //Condicion Cliente Nuevo menor a 5 años
     private void tipoCliente(int antiguedad) {
         if (antiguedad < 5) {
          Leer.showDatos("Este es un tipo De cliente nuevo por tener"+getAntiguedad() +"de antiguedad" + "\n");

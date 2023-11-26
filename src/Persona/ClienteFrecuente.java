@@ -28,6 +28,8 @@ public class ClienteFrecuente extends Cliente {
         return toString();
     }
 
+    
+    //Condicion Cliente Frecuente por tener de 4 a 9 años
     private void tipoCliente(int antiguedad) {
         if (antiguedad > 4 && antiguedad < 10) {
 

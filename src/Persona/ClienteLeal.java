@@ -29,9 +29,10 @@ public class ClienteLeal extends Cliente {
         return toString();
 
     }
+    //Condicion Cliente leal mayor igual a 10 años
 
     private void tipoCliente(int antiguedad) {
-        if (antiguedad > 10) {
+        if (antiguedad >= 10) {
             Leer.showDatos("Este es un tipo De cliente leal por tener" + getAntiguedad() + "de antiguedad" + "\n");
 
         }
