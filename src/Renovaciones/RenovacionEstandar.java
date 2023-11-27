@@ -3,26 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Renovaciones;
+
 import Seguros.Seguro;
+import archivos.Archivo;
+import java.util.Date;
+
 /**
  *
  * @author rafae
  */
-public class RenovacionEstandar  implements Renovacion{
+public class RenovacionEstandar implements Renovacion {
+
     private String numRenovacion;
-    private String fechaRenovacion;
-    private int duracion=1;//En años
+    private Date fechaRenovacion;
+    private int duracion = 1;//En años
     private Seguro seguro;
     private String formaDePago;
 
-    public RenovacionEstandar(String numRenovacion, String fechaRenovacion, Seguro seguro, String formaDePago) {
+    public RenovacionEstandar(String numRenovacion, Date fechaRenovacion, Seguro seguro, String formaDePago) {
         this.numRenovacion = numRenovacion;
         this.fechaRenovacion = fechaRenovacion;
         this.seguro = seguro;
         this.formaDePago = formaDePago;
     }
-
-   
 
     public String getNumRenovacion() {
         return numRenovacion;
@@ -32,11 +35,11 @@ public class RenovacionEstandar  implements Renovacion{
         this.numRenovacion = numRenovacion;
     }
 
-    public String getFechaRenovacion() {
+    public Date getFechaRenovacion() {
         return fechaRenovacion;
     }
 
-    public void setFechaRenovacion(String fechaRenovacion) {
+    public void setFechaRenovacion(Date fechaRenovacion) {
         this.fechaRenovacion = fechaRenovacion;
     }
 
@@ -56,8 +59,6 @@ public class RenovacionEstandar  implements Renovacion{
         this.seguro = seguro;
     }
 
-
-
     public String getFormaDePago() {
         return formaDePago;
     }
@@ -68,11 +69,23 @@ public class RenovacionEstandar  implements Renovacion{
 
     @Override
     public double renovar() {
-   
-        return getSeguro().getPrecio()*duracion;
+        String formatoNombre = "Renovacion_" + this.numRenovacion;
+        formatoNombre = formatoNombre.replace("/", "_");
+        Archivo archivo = new Archivo(formatoNombre, "Renovaciones");
+        archivo.escribrir(toString());
+        return getSeguro().getPrecio() * duracion;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Renovacion estándar:").append("\n");
+        sb.append("Número de renovación: ").append(numRenovacion).append("\n");
+        sb.append("Fecha de renovación: ").append(fechaRenovacion).append("\n");
+        sb.append("Duración: ").append(duracion).append("\n");
+        sb.append("Seguro: ").append(seguro.toString()).append("\n");
+        sb.append("Forma de pago:").append(formaDePago).append("\n");
+        return sb.toString();
+    }
 
-    
-    
 }

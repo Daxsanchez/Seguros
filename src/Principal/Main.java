@@ -5,7 +5,12 @@ import Persona.AnalistaRiesgos;
 import Persona.Empleado;
 import Persona.ProcesarCliente;
 import Persona.ProcesarEmpleado;
+import Renovaciones.RenovacionEstandar;
+import Seguros.Seguro;
+import Seguros.SeguroColision;
+import archivos.Archivo;
 import excepciones.ProcesarNumero;
+import java.util.Date;
 
 /**
  *
@@ -14,13 +19,10 @@ import excepciones.ProcesarNumero;
 public class Main {
 
     public static void main(String[] args) {
-        Empleado[] empleados = new Empleado[3];
-        
-        empleados[0] = new AgenteDeSeguros(true, 5, 1, "Gerente", 5000.0, "Juan", "Hernández", "311545345");
-        empleados[1] = new AgenteDeSeguros(false, 21, 2, "Oficina", 4000.0, "Eduardo", "Sánchez", "1545345");
-        empleados[2] = new AnalistaRiesgos(3, "Gerente", 3000.0, "Rodrigo", "López", "r43432", 5);
-        
-        ProcesarEmpleado pe = new ProcesarEmpleado();
-        pe.mostrarEmpleado(empleados);
+        SeguroColision segu = new SeguroColision(4, "DJNAS3", new Date(), new Date(), true, "PRUEBA", 54.0, 43.0);
+        RenovacionEstandar renoEstan = new RenovacionEstandar("Fomg56", new Date(), segu, "EFECTIVO");
+        renoEstan.renovar();
+        /*Archivo archivo = new Archivo("prueba.csv", "PRUEBA");
+        archivo.escribrir("PRUEBA DE ESCRITURA EN EL ARCHIVO, RSENFJDNFDS, IJSFIDSN");*/
     }
 }
