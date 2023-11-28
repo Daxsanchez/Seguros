@@ -70,8 +70,7 @@ public class RenovacionEstandar implements Renovacion {
     @Override
     public double renovar() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;
-        formatoNombre = formatoNombre.replace("/", "_");
-        Archivo archivo = new Archivo(formatoNombre, "Renovaciones");
+        Archivo archivo = new Archivo(formatoNombre, "Renovaciones Estándar");
         archivo.escribrir(toString());
         return getSeguro().getPrecio() * duracion;
     }

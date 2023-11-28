@@ -29,6 +29,9 @@ public class Archivo {
                     System.out.println("Se ha creado correctamente la carpeta: " + nameCarpeta);
                 }
             }
+            if (nameArchivo == null) {
+                return;
+            }
             if (!archivo.exists()) {
                 if (archivo.createNewFile()) {
                     System.out.println("Se ha creado correctamente el archivo: " + nameArchivo);

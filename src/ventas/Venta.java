@@ -4,22 +4,26 @@ import Persona.Cliente;
 import Persona.Empleado;
 import java.util.Date;
 import Seguros.Seguro;
+import archivos.Archivo;
+import archivos.ArchivoBin;
+import java.io.Serializable;
+import vehiculos.Vehiculo;
 
 /**
  *
  * @author Dax Sánchez
  */
-public class Venta {
+public class Venta implements Serializable{
 
     private int numPoliza;
     private Date fechaVenta;
     private Cliente cliente;
     private Empleado empleado;
-    private String vehiculo;
+    private Vehiculo vehiculo;
     private Double deducible; // Lo que debe pagar el cliente
     private Seguro seguro;
 
-    public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, String vehiculo,
+    public Venta(int numPoliza, Date fechaVenta, Cliente cliente, Empleado empleado, Vehiculo vehiculo,
             Double deducible, Seguro seguro) {
         this.numPoliza = numPoliza;
         this.fechaVenta = fechaVenta;
@@ -62,11 +66,11 @@ public class Venta {
         this.empleado = empleado;
     }
 
-    public String getVehiculo() {
+    public Vehiculo getVehiculo() {
         return vehiculo;
     }
 
-    public void setVehiculo(String vehiculo) {
+    public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
     }
 
@@ -87,10 +91,18 @@ public class Venta {
     }
 
     public Double calcVenta() {
+        new Archivo(null, "Ventas");//Crea carpeta ventas si no existe, se manda un null en el primer parámetro para que no creé un archivo
+        ArchivoBin archivoBin = new ArchivoBin("Ventas//Venta_" + this.numPoliza + ".bin");
+        archivoBin.agregarVenta(this);
         return cliente.calcDescuento(seguro.getPrecio());
     }
-    
-    public Double calcPagoAseguradora(){
+
+    public Venta getVenta() {
+        ArchivoBin archivoBin = new ArchivoBin("Ventas//Venta_" + this.numPoliza + ".bin");
+        return archivoBin.getVentaArchivo();
+    }
+
+    public Double calcPagoAseguradora() {
         double costo = seguro.getMontoAsegurado() - deducible;
         return costo;
     }
@@ -103,7 +115,7 @@ public class Venta {
         sb.append("Fecha de venta: ").append(fechaVenta).append("\n");
         sb.append("Cliente: ").append(cliente.toString()).append("\n");
         sb.append("Empleado: ").append(empleado.toString()).append("\n");
-        sb.append("Vehiculo: ").append(vehiculo).append("\n");
+        sb.append("Vehiculo: ").append(vehiculo.toString()).append("\n");
         sb.append("Deducible: ").append(deducible).append("\n");
         sb.append("Seguro: ").append(seguro.toString()).append("\n");
         return sb.toString();

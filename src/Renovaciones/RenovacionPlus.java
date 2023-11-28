@@ -1,11 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Renovaciones;
 
 import Persona.Cliente;
 import Seguros.Seguro;
+import archivos.Archivo;
+import java.util.Date;
 
 /**
  *
@@ -14,17 +12,18 @@ import Seguros.Seguro;
 public class RenovacionPlus implements Renovacion {
 
     private String numRenovacion;
-    private String fechaRenovacion;
+    private Date fechaRenovacion;
     private int duracion = 5;//En años
     private Seguro seguro;
     private String formaDePago;
     private Cliente cliente;
 
-    public RenovacionPlus(String numRenovacion, String fechaRenovacion, Seguro seguro, String formaDePago) {
+    public RenovacionPlus(String numRenovacion, Date fechaRenovacion, Seguro seguro, String formaDePago, Cliente cliente) {
         this.numRenovacion = numRenovacion;
         this.fechaRenovacion = fechaRenovacion;
         this.seguro = seguro;
         this.formaDePago = formaDePago;
+        this.cliente = cliente;
     }
 
     public String getNumRenovacion() {
@@ -35,11 +34,11 @@ public class RenovacionPlus implements Renovacion {
         this.numRenovacion = numRenovacion;
     }
 
-    public String getFechaRenovacion() {
+    public Date getFechaRenovacion() {
         return fechaRenovacion;
     }
 
-    public void setFechaRenovacion(String fechaRenovacion) {
+    public void setFechaRenovacion(Date fechaRenovacion) {
         this.fechaRenovacion = fechaRenovacion;
     }
 
@@ -69,7 +68,24 @@ public class RenovacionPlus implements Renovacion {
 
     @Override
     public double renovar() {
-        return cliente.calcDescuento(seguro.getPrecio())*duracion;
+        String formatoNombre = "Renovacion_" + this.numRenovacion;
+        Archivo archivo = new Archivo(formatoNombre, "Renovaciones Plus");
+        archivo.escribrir(toString());
+        return cliente.calcDescuento(seguro.getPrecio()) * duracion;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Renovacion plus:").append("\n");
+        sb.append("Número de renovacion: ").append(numRenovacion).append("\n");
+        sb.append("Fecha de renovación: ").append(fechaRenovacion).append("\n");
+        sb.append("Duración: ").append(duracion).append("\n");
+        sb.append("Seguro: ").append(seguro.toString()).append("\n");
+        sb.append("Forma de pago: ").append(formaDePago).append("\n");
+        sb.append("Cliente: ").append(cliente.toString()).append("\n");
+        sb.append('}');
+        return sb.toString();
     }
 
 }
