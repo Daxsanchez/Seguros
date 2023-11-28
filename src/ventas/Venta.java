@@ -4,8 +4,6 @@ import Persona.Cliente;
 import Persona.Empleado;
 import java.util.Date;
 import Seguros.Seguro;
-import archivos.Archivo;
-import archivos.ArchivoBin;
 import java.io.Serializable;
 import vehiculos.Vehiculo;
 
@@ -13,7 +11,7 @@ import vehiculos.Vehiculo;
  *
  * @author Dax Sánchez
  */
-public class Venta implements Serializable{
+public class Venta {
 
     private int numPoliza;
     private Date fechaVenta;
@@ -91,15 +89,7 @@ public class Venta implements Serializable{
     }
 
     public Double calcVenta() {
-        new Archivo(null, "Ventas");//Crea carpeta ventas si no existe, se manda un null en el primer parámetro para que no creé un archivo
-        ArchivoBin archivoBin = new ArchivoBin("Ventas//Venta_" + this.numPoliza + ".bin");
-        archivoBin.agregarVenta(this);
         return cliente.calcDescuento(seguro.getPrecio());
-    }
-
-    public Venta getVenta() {
-        ArchivoBin archivoBin = new ArchivoBin("Ventas//Venta_" + this.numPoliza + ".bin");
-        return archivoBin.getVentaArchivo();
     }
 
     public Double calcPagoAseguradora() {

@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import vehiculos.Vehiculo;
 import ventas.Venta;
 
 /**
@@ -37,11 +38,11 @@ public class ArchivoBin {
         }
     }
 
-    public void agregarVenta(Venta venta) {
+    public void agregarVehiculo(Vehiculo vehiculo) {
         AddContenido outPutSteam;
         try {
             outPutSteam = new AddContenido(new FileOutputStream(this.fileName, true));
-            outPutSteam.writeObject(venta);
+            outPutSteam.writeObject(vehiculo);
             outPutSteam.close();
 
         } catch (FileNotFoundException ex) {
@@ -51,21 +52,21 @@ public class ArchivoBin {
         }
     }
 
-    public Venta getVentaArchivo() {
+    public Vehiculo getVehiculoArchivo() {
         ObjectInputStream inputStream = null;
-        Venta venta = null;
+        Vehiculo vehiculo = null;
         try {
             inputStream = new ObjectInputStream(new FileInputStream(this.fileName));
 
             while (true) {
-                venta = (Venta) inputStream.readObject();
+                vehiculo = (Vehiculo) inputStream.readObject();
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Excepción de tipo: " + ex.getClass().getSimpleName());
         } catch (IOException | ClassNotFoundException ex) {
             System.out.println("Se terminó la lectura del archivo");
         }
-        return venta;
+        return vehiculo;
     }
 
 }

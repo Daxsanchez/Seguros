@@ -25,11 +25,13 @@ public class Main {
         renoEstan.renovar();
         renoPlus.renovar();
         AnalistaRiesgos ar = new AnalistaRiesgos(5, "Gerente", 500.0, "Pedro","Sanchez", "4353443", 5);
-        Vehiculo v1 = new Vehiculo();
-        Venta venta = new Venta(5, new Date(), c1, ar, v1, 900.0, segu);
-        venta.calcVenta();
-        Venta v2 = venta.getVenta();
+        
+        
+        Vehiculo v1 = new Vehiculo("FDS34", "Hinda", "dsoafds");
+        v1.guardarArchivoVehiculo();
+        Vehiculo v2 = v1.getVehiculo();
         System.out.println(v2.toString());
+        
         /*Archivo archivo = new Archivo("prueba.csv", "PRUEBA");
         archivo.escribrir("PRUEBA DE ESCRITURA EN EL ARCHIVO, RSENFJDNFDS, IJSFIDSN");*/
     }

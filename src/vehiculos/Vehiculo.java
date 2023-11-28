@@ -1,11 +1,15 @@
 package vehiculos;
 
+import archivos.Archivo;
+import archivos.ArchivoBin;
+import java.io.Serializable;
+
 /**
  *
  * @author Dax Sánchez
  */
 //Sobrecarga de métodos
-public class Vehiculo {
+public class Vehiculo implements Serializable {
 
     private String placa;
     private String marca;
@@ -109,6 +113,17 @@ public class Vehiculo {
         if (detallada) {
             System.out.println("Detalles adicionales:\n" + toString());
         }
+    }
+
+    public void guardarArchivoVehiculo() {
+        new Archivo(null, "Vehiculos");//Crea carpeta ventas si no existe, se manda un null en el primer parámetro para que no creé un archivo
+        ArchivoBin archivoBin = new ArchivoBin("Vehiculos//Vehiculo_" + this.placa + ".bin");
+        archivoBin.agregarVehiculo(this);
+    }
+
+    public Vehiculo getVehiculo() {
+        ArchivoBin archivoBin = new ArchivoBin("Vehiculos//Vehiculo_" + this.placa + ".bin");
+        return archivoBin.getVehiculoArchivo();
     }
 
 }
