@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Persona;
 
 import leer.Leer;
@@ -14,6 +10,10 @@ public class ClienteFrecuente extends Cliente {
 
     public ClienteFrecuente(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
+        while (super.getAntiguedad() < 4 || antiguedad > 9) {
+            Leer.showDatos("La antigüedad para este cliente va de 4 a 9 años");
+            super.setAntiguedad(Leer.leerEntero("Ingrese una antiguedad con estos rangos:"));
+        }
     }
 
     @Override
@@ -24,17 +24,8 @@ public class ClienteFrecuente extends Cliente {
     }
 
     public String getData() {
-        tipoCliente(super.getAntiguedad());
         return toString();
     }
 
-    //Condicion Cliente Frecuente por tener de 4 a 9 años
-    private void tipoCliente(int antiguedad) {
-        if (antiguedad > 4 && antiguedad < 10) {
-
-            Leer.showDatos("Este es un tipo De cliente Frecuente por tener" + getAntiguedad() + "de antiguedad" + "\n");
-
-        }
-
-    }
+    //Condicion Cliente Frecuente por tener de 5 a 9 años
 }

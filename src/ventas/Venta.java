@@ -88,6 +88,7 @@ public class Venta {
         this.seguro = seguro;
     }
 
+    //Se usa el método del cliente para obtener el precio con descuento del cliente dependiendo su antigüedad
     public Double calcVenta() {
         return cliente.calcDescuento(seguro.getPrecio());
     }

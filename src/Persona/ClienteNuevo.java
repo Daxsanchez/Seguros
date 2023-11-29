@@ -10,6 +10,10 @@ public class ClienteNuevo extends Cliente {
 
     public ClienteNuevo(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
+        while (super.getAntiguedad() >= 5) {
+            Leer.showDatos("La antigüedad para este cliente va de 0 a 5 años");
+            super.setAntiguedad(Leer.leerEntero("Ingrese una antiguedad con estos rangos:"));
+        }
     }
 
     @Override

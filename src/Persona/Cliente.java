@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Persona;
 
 /**
@@ -35,16 +31,17 @@ public abstract class Cliente extends Persona {
         return sb.toString();
     }
 
+    //Descuento es la variable que se le cobrará al cliente, y se manda para que la retorne con el descuento aplicado
     public double calcDescuento(double descuento) {
         //Nuevo
         if (antiguedad < 5) {
-            descuento += (descuento * 0.05);
+            descuento -= (descuento * 0.05);
             //Frecuente
         } else if (antiguedad > 4 && antiguedad < 10) {
-            descuento += (descuento * 0.1);
+            descuento -= (descuento * 0.1);
             //Leal
         } else if (antiguedad >= 10) {
-            descuento += (descuento * 0.2);
+            descuento -= (descuento * 0.2);
         }
         return descuento;
     }
