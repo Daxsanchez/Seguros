@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import Renovaciones.Renovacion;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 /**
  *
@@ -52,6 +54,22 @@ public class Archivo {
             escribir.close();
         } catch (IOException ex) {
             System.out.println("El archivo es de tipo: " + ex.getClass().getSimpleName());
+        }
+    }
+
+    public void leerArchivo() {
+        try {
+            FileReader leer = new FileReader(this.archivo);
+            BufferedReader buffer = new BufferedReader(leer);
+
+            String linea = buffer.readLine();
+
+            while (linea != null) {
+                System.out.println(linea);
+                linea = buffer.readLine();
+            }
+        } catch (IOException ex) {
+            System.out.println("El tipo de excepción es: " + ex.getClass().getSimpleName());
         }
     }
 
