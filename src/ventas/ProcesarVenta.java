@@ -19,7 +19,7 @@ public class ProcesarVenta {
     public void totalPagoAseguradora(Venta[] ventas) {
         double total = 0.0;
         for (Venta v : ventas) {
-            if(v.getDeducible() > v.getSeguro().getMontoAsegurado()){
+            while(v.getDeducible() > v.getSeguro().getMontoAsegurado()){
                 Leer.showDatos("El deducible no puede ser mayor al monto de la aseguradora");
                 v.setDeducible(Leer.leerDouble("Ingrese el monto del deducible: "));
             }
