@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Renovaciones;
 
 import Seguros.Seguro;
@@ -67,6 +63,7 @@ public class RenovacionEstandar implements Renovacion {
         this.formaDePago = formaDePago;
     }
 
+    //Este médoto genera una renovación de tipo estándar y genera un archivo de texto con la información de la renovación
     @Override
     public double renovar() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;

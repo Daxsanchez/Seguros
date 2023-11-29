@@ -66,6 +66,7 @@ public class RenovacionPlus implements Renovacion {
         this.formaDePago = formaDePago;
     }
 
+    //Este médoto genera una renovación de tipo plus y genera un archivo de texto con la información de la renovación
     @Override
     public double renovar() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;

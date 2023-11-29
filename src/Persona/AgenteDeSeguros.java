@@ -63,7 +63,7 @@ public class AgenteDeSeguros extends Empleado {
     }
 
     private void calcComision(boolean comision) {
-        if (comision == true) {
+        if (comision) {
             setSalario(getSalario() + (getSalario() * 0.5));
             Leer.showDatos(getSalario().toString());
         }

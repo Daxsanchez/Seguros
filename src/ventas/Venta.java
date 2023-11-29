@@ -97,6 +97,7 @@ public class Venta {
         return cliente.calcDescuento(seguro.getPrecio());
     }
 
+    //Aquí se calcula lo que pagará la aseguradora
     public Double calcPagoAseguradora() {
         double costo = seguro.getMontoAsegurado() - deducible;
         return costo;

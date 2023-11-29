@@ -5,9 +5,7 @@ import Persona.Cliente;
 import Persona.ClienteFrecuente;
 import Persona.ClienteLeal;
 import Persona.ClienteNuevo;
-import Persona.ProcesarClienteFrecuente;
-import Persona.ProcesarClienteLeal;
-import Persona.ProcesarClienteNuevo;
+import Persona.ProcesarCliente;
 import Renovaciones.RenovacionEstandar;
 import Renovaciones.RenovacionPlus;
 import Seguros.SeguroColision;
@@ -46,28 +44,8 @@ public class Main {
         v1.guardarArchivoVehiculo();
         Vehiculo v2 = v1.getVehiculo();
         System.out.println(v2.toString());*/
-        ClienteFrecuente[] c = new ClienteFrecuente[2];
-
-        c[0] = new Persona.ClienteFrecuente("Ruffino", "Perez", "311567908", 4);
-        c[1] = new Persona.ClienteFrecuente("Ruffino", "Perez", "311567908", 5);
-        ProcesarClienteFrecuente p = new ProcesarClienteFrecuente();
-
-        p.showClientes(c);
-
-        Persona.ClienteNuevo[] clienteNuevo = new ClienteNuevo[2];
-        clienteNuevo[0] = new ClienteNuevo("Pedro", "Macias", "311-532-643", 1);
-        clienteNuevo[1] = new ClienteNuevo("Edgar", "Soto", "311-632-243", 5);
-        Persona.ProcesarClienteNuevo n = new ProcesarClienteNuevo();
-        n.showClientes(clienteNuevo);
-
-        Persona.ClienteLeal[] clienteLeal = new ClienteLeal[2];
-        clienteLeal[0]=new ClienteLeal("Ernesto Lopez", "Mateos", "311-234-242", 12);
-        clienteLeal[1]=new ClienteLeal("José", "Huerta", "311-532-532", 9);
-        
-        Persona.ProcesarClienteLeal cl = new ProcesarClienteLeal();
-        
-        cl.showClientes(clienteLeal);
-        
-
+        Pruebas pruebas = new Pruebas();
+        pruebas.pruebasCliente();
     }
+
 }
