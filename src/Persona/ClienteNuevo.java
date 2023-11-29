@@ -8,11 +8,13 @@ import leer.Leer;
  */
 public class ClienteNuevo extends Cliente {
 
+    private static boolean mensajeMostrado = false;
+
     public ClienteNuevo(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
-        while (super.getAntiguedad() >= 5) {
-            Leer.showDatos("La antigüedad para este cliente va de 0 a 5 años");
-            super.setAntiguedad(Leer.leerEntero("Ingrese una antiguedad con estos rangos:"));
+        if (!mensajeMostrado) {
+            Leer.showDatos("==El TIPO CLIENTE FRECUENTE ES MENOR A 5 AÑOS==");
+            mensajeMostrado = true; // Marcar que el mensaje ha sido mostrado
         }
     }
 
@@ -24,9 +26,14 @@ public class ClienteNuevo extends Cliente {
     }
 
     public String getData() {
-        tipoCliente(super.getAntiguedad());
         return toString();
 
+    }
+
+    @Override
+    public int getCliente() {
+        tipoCliente(getAntiguedad());
+        return getAntiguedad();
     }
 
     //Condicion Cliente Nuevo menor a 5 años

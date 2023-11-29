@@ -1,0 +1,50 @@
+Renovacion plus:
+Número de renovacion: F55DSfdsfsd
+Fecha de renovación: Tue Nov 28 23:33:30 CST 2023
+Duración: 5
+Seguro: Seguro SeguroColision :
+Número de póliza: DJNAS3
+Fecha inicio: Tue Nov 28 23:33:28 CST 2023
+Fecha vencimiento: Tue Nov 28 23:33:28 CST 2023
+Aplica el seguro: true
+Descripción: PRUEBA
+Precio: 5000.0
+Monto asegurado: 10000.0
+Gravedad: 4
+
+Forma de pago: Tarjeta
+Cliente: Cliente Frecuente
+Cliente: 
+Antiguedad: 3
+Persona: 
+Nombre: Pedro
+Apellidos: Sanchez
+Número de Teléfono: 311432543
+
+
+}
+Renovacion plus:
+Número de renovacion: F55DSfdsfsd
+Fecha de renovación: Tue Nov 28 23:34:02 CST 2023
+Duración: 5
+Seguro: Seguro SeguroColision :
+Número de póliza: DJNAS3
+Fecha inicio: Tue Nov 28 23:33:56 CST 2023
+Fecha vencimiento: Tue Nov 28 23:33:56 CST 2023
+Aplica el seguro: true
+Descripción: PRUEBA
+Precio: 5000.0
+Monto asegurado: 10000.0
+Gravedad: 4
+
+Forma de pago: Tarjeta
+Cliente: Cliente Frecuente
+Cliente: 
+Antiguedad: 3
+Persona: 
+Nombre: Pedro
+Apellidos: Sanchez
+Número de Teléfono: 311432543
+
+
+}

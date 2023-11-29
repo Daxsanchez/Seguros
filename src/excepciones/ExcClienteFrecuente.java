@@ -12,7 +12,7 @@ public class ExcClienteFrecuente extends Exception {
 
     @Override
     public String getMessage() {
-        return "Este tipo de cliente no puede tener mas de 5 años de antiguedad";
+        return "Este tipo de cliente está entre los 5 y 9 años de antiguedad";
 
     }
     

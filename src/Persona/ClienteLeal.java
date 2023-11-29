@@ -8,11 +8,13 @@ import leer.Leer;
  */
 public class ClienteLeal extends Cliente {
 
+    private static boolean mensajeMostrado = false;
+
     public ClienteLeal(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
-        while (super.getAntiguedad() < 10) {
-            Leer.showDatos("La antigüedad para este cliente va de 10 años en adelante");
-            super.setAntiguedad(Leer.leerEntero("Ingrese una antiguedad con estos rangos:"));
+        if (!mensajeMostrado) {
+            Leer.showDatos("====El TIPO CLIENTE FRECUENTE ES MAYOR A 10 AÑOS==");
+            mensajeMostrado = true;
         }
     }
 
@@ -25,7 +27,6 @@ public class ClienteLeal extends Cliente {
 
     @Override
     public String getData() {
-        tipoCliente(getAntiguedad());
         return toString();
 
     }
@@ -37,6 +38,12 @@ public class ClienteLeal extends Cliente {
 
         }
 
+    }
+
+    @Override
+    public int getCliente() {
+        tipoCliente(getAntiguedad());
+        return getAntiguedad();
     }
 
 }

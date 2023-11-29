@@ -47,5 +47,6 @@ public abstract class Cliente extends Persona {
     }
 
     public abstract String getData();
+    public abstract int getCliente();
 
 }

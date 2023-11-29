@@ -9,7 +9,7 @@ import leer.Leer;
  *
  * @author rafae
  */
-public class ProcesarCliente {
+public class ProcesarClienteLeal {
 
     public void showClientes(Cliente[] cliente) {
         for (Cliente d : cliente) {
