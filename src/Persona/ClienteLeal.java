@@ -13,7 +13,7 @@ public class ClienteLeal extends Cliente {
     public ClienteLeal(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
         if (!mensajeMostrado) {
-            Leer.showDatos("====El TIPO CLIENTE FRECUENTE ES MAYOR A 10 AÑOS==");
+            Leer.showDatos("====El TIPO CLIENTE LEAL ES MAYOR A 10 AÑOS==");
             mensajeMostrado = true;
         }
     }

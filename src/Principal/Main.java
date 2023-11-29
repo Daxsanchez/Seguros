@@ -3,7 +3,10 @@ package Principal;
 import Persona.AnalistaRiesgos;
 import Persona.Cliente;
 import Persona.ClienteFrecuente;
+import Persona.ClienteLeal;
+import Persona.ClienteNuevo;
 import Persona.ProcesarClienteFrecuente;
+import Persona.ProcesarClienteLeal;
 import Persona.ProcesarClienteNuevo;
 import Renovaciones.RenovacionEstandar;
 import Renovaciones.RenovacionPlus;
@@ -14,15 +17,11 @@ import vehiculos.Vehiculo;
 import ventas.ProcesarVenta;
 import ventas.Venta;
 
-/**
- *
- * @author Dax Sánchez
- */
 public class Main {
 
     public static void main(String[] args) {
 
-       /* SeguroColision segu = new SeguroColision(4, "DJNAS3", new Date(), new Date(), true, "PRUEBA", 5000.0, 10000.0);
+        /* SeguroColision segu = new SeguroColision(4, "DJNAS3", new Date(), new Date(), true, "PRUEBA", 5000.0, 10000.0);
         RenovacionEstandar renoEstan = new RenovacionEstandar("Fomg56", new Date(), segu, "EFECTIVO");
         Cliente c1 = new ClienteFrecuente("Pedro", "Sanchez", "311432543", 3);
         RenovacionPlus renoPlus = new RenovacionPlus("F55DSfdsfsd", new Date(), segu, "Tarjeta", c1);
@@ -54,6 +53,21 @@ public class Main {
         ProcesarClienteFrecuente p = new ProcesarClienteFrecuente();
 
         p.showClientes(c);
+
+        Persona.ClienteNuevo[] clienteNuevo = new ClienteNuevo[2];
+        clienteNuevo[0] = new ClienteNuevo("Pedro", "Macias", "311-532-643", 1);
+        clienteNuevo[1] = new ClienteNuevo("Edgar", "Soto", "311-632-243", 5);
+        Persona.ProcesarClienteNuevo n = new ProcesarClienteNuevo();
+        n.showClientes(clienteNuevo);
+
+        Persona.ClienteLeal[] clienteLeal = new ClienteLeal[2];
+        clienteLeal[0]=new ClienteLeal("Ernesto Lopez", "Mateos", "311-234-242", 12);
+        clienteLeal[1]=new ClienteLeal("José", "Huerta", "311-532-532", 9);
+        
+        Persona.ProcesarClienteLeal cl = new ProcesarClienteLeal();
+        
+        cl.showClientes(clienteLeal);
+        
 
     }
 }

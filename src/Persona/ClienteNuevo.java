@@ -13,7 +13,7 @@ public class ClienteNuevo extends Cliente {
     public ClienteNuevo(String nombre, String apellido, String numTelefonon, int antiguedad) {
         super(nombre, apellido, numTelefonon, antiguedad);
         if (!mensajeMostrado) {
-            Leer.showDatos("==El TIPO CLIENTE FRECUENTE ES MENOR A 5 AÑOS==");
+            Leer.showDatos("==El TIPO CLIENTE NUEVO ES MENOR A 5 AÑOS==");
             mensajeMostrado = true; // Marcar que el mensaje ha sido mostrado
         }
     }
