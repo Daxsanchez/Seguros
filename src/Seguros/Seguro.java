@@ -6,6 +6,8 @@ import java.util.Date;
  *
  * @author Dax Sánchez
  */
+//4.1-La clase seguro debe contener número de póliza, fecha de inicio, fecha de vencimiento, aplica seguro, descripción.
+
 public abstract class Seguro {
 
     private String numPoliza;

@@ -7,6 +7,9 @@ import leer.Leer;
  *
  * @author Dax Sánchez
  */
+
+//4.4 Seguro contra robo. Tiempo de robo(horas).
+
 public class SeguroRobo extends Seguro {
 
     private int tiempoRobo;//En horas

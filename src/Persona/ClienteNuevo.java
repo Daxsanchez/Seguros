@@ -6,6 +6,8 @@ import leer.Leer;
  *
  * @author rafae
  */
+  //2.2-El cliente nuevo tiene 0 años de antigüedad,cuenta con nombre,número de teléfono y apellidos,
+
 public class ClienteNuevo extends Cliente {
 
     private static boolean mensajeMostrado = false;
@@ -36,7 +38,7 @@ public class ClienteNuevo extends Cliente {
         return getAntiguedad();
     }
 
-    //Condicion Cliente Nuevo menor a 5 años
+  
     private void tipoCliente(int antiguedad) {
         if (antiguedad < 5) {
             Leer.showDatos("Este es un tipo De cliente nuevo por tener" + getAntiguedad() + "de antiguedad" + "\n");

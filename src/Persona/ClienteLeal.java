@@ -6,6 +6,8 @@ import leer.Leer;
  *
  * @author rafae
  */
+
+//2.4-El cliente frecuente tiene 5 años de antigüedad, cuenta con nombre, apellidos y teléfono,
 public class ClienteLeal extends Cliente {
 
     private static boolean mensajeMostrado = false;

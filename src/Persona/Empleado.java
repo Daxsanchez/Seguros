@@ -4,6 +4,9 @@ package Persona;
  *
  * @author rafae
  */
+
+//3.1-Se desea que un empleado tenga un id, nombre,apellidos, puesto, salario y número de teléfono.
+
 public abstract class Empleado extends Persona {
     
     private int id;

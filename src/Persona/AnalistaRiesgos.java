@@ -8,6 +8,11 @@ package Persona;
  *
  * @author rafae
  */
+/*3.3 Reporte de riesgos, recibirá 3 tipos de bono de productividad, 
+si la productividad es mayor al 80%, recibirá un bono del 50% del salario Base, 
+En caso de que sea productividad del 30% a 50%, el analista recibirá un bono de 30% 
+de su salario base.*/
+
 public class AnalistaRiesgos extends Empleado{
 
     private int productividad;

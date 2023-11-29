@@ -6,8 +6,12 @@ import leer.Leer;
  *
  * @author Dax Sánchez
  */
+
+//1.2 Métodos para calcular Ventas
 public class ProcesarVenta {
 
+    
+    
     public void totalVentasSeguros(Venta[] ventas) {
         double total = 0.0;
         for (Venta v : ventas) {

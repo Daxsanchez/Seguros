@@ -7,6 +7,7 @@ import leer.Leer;
  *
  * @author Dax Sánchez
  */
+//4.3 seguro de colisión. Gravedad de daños(1-3).
 public class SeguroColision extends Seguro {
 
     private int gravedad;
