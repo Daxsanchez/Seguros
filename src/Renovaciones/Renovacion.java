@@ -12,5 +12,5 @@ public interface Renovacion {
     
     public double renovar();
     
-    
+    public void getArchivoRenovacion();
 }

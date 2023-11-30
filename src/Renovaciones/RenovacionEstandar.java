@@ -84,4 +84,11 @@ public class RenovacionEstandar implements Renovacion {
         return sb.toString();
     }
 
+    @Override
+    public void getArchivoRenovacion() {
+        String formatoNombre = "Renovacion_" + this.numRenovacion;
+        Archivo archivo = new Archivo(formatoNombre, "Renovaciones Estándar");
+        archivo.leerArchivo();
+    }
+
 }
