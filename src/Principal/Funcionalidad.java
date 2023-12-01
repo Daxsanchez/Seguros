@@ -9,7 +9,7 @@ import Persona.ProcesarCliente;
  *
  * @author Dax Sánchez
  */
-public class Pruebas {
+public class Funcionalidad {
 
     public void pruebasCliente() {
         ClienteFrecuente[] c = new ClienteFrecuente[2];

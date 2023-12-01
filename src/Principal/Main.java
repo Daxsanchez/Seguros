@@ -1,19 +1,11 @@
 package Principal;
 
-import Persona.AnalistaRiesgos;
 import Persona.Cliente;
 import Persona.ClienteFrecuente;
-import Persona.ClienteLeal;
-import Persona.ClienteNuevo;
-import Persona.ProcesarCliente;
 import Renovaciones.RenovacionEstandar;
 import Renovaciones.RenovacionPlus;
 import Seguros.SeguroColision;
-import archivos.ArchivoBin;
 import java.util.Date;
-import vehiculos.Vehiculo;
-import ventas.ProcesarVenta;
-import ventas.Venta;
 
 public class Main {
 
