@@ -41,6 +41,11 @@ public class Funcionalidad {
 
     }
 
+    public void funcionesVehiculo() {
+        Vehiculo[] vehiculos = vehiculos();
+        vehiculos[0].obtenerInformacion(true);
+    }
+
     private Empleado[] empleados() {
         Empleado[] empleados = new Empleado[3];
         empleados[0] = new AgenteDeSeguros(true, 300, 2134142, "Superior", 12000.00, "Arturo", "Bañuelos", "311-424-221");
