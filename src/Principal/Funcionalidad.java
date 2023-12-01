@@ -18,6 +18,7 @@ import Persona.AnalistaRiesgos;
 import Persona.Empleado;
 import Persona.ProcesarEmpleado;
 import vehiculos.Vehiculo;
+import ventas.Venta;
 
 /**
  *
@@ -84,5 +85,18 @@ public class Funcionalidad {
         vehiculos[2] = new Vehiculo("PDA-GR3-G41", "suzuki", "FRONX BOOSTERGREEN ", "Rojo", 2012);
         return vehiculos;
     }
-    
+
+    public Venta[] ventas() {
+        Venta[] ventas = new Venta[3];
+        Cliente[] clientes = clientes();
+        Empleado[] empleados = empleados();
+        Vehiculo[] vehiculos = vehiculos();
+        Seguro[] seguros = seguros();
+
+        ventas[0] = new Venta(4023, new Date(), clientes[0], empleados[0], vehiculos[0], 9000.0, seguros[0]);
+        ventas[1] = new Venta(5354, new Date(), clientes[1], empleados[1], vehiculos[1], 11000.0, seguros[1]);
+        ventas[2] = new Venta(8756, new Date(), clientes[2], empleados[2], vehiculos[2], 6000.0, seguros[2]);
+
+        return ventas;
+    }
 }
