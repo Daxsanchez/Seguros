@@ -11,12 +11,12 @@ import java.util.Date;
 public class RenovacionEstandar implements Renovacion {
 
     private String numRenovacion;
-    private Date fechaRenovacion;
+    private String fechaRenovacion;
     private int duracion = 1;//En años
     private Seguro seguro;
     private String formaDePago;
 
-    public RenovacionEstandar(String numRenovacion, Date fechaRenovacion, Seguro seguro, String formaDePago) {
+    public RenovacionEstandar(String numRenovacion, String fechaRenovacion, Seguro seguro, String formaDePago) {
         this.numRenovacion = numRenovacion;
         this.fechaRenovacion = fechaRenovacion;
         this.seguro = seguro;
@@ -31,11 +31,11 @@ public class RenovacionEstandar implements Renovacion {
         this.numRenovacion = numRenovacion;
     }
 
-    public Date getFechaRenovacion() {
+    public String getFechaRenovacion() {
         return fechaRenovacion;
     }
 
-    public void setFechaRenovacion(Date fechaRenovacion) {
+    public void setFechaRenovacion(String fechaRenovacion) {
         this.fechaRenovacion = fechaRenovacion;
     }
 
@@ -84,8 +84,9 @@ public class RenovacionEstandar implements Renovacion {
         return sb.toString();
     }
 
+    //Obtiene el archivo de la renovación
     @Override
-    public void getArchivoRenovacion() {
+    public void showArchivoRenovacion() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;
         Archivo archivo = new Archivo(formatoNombre, "Renovaciones Estándar");
         archivo.leerArchivo();

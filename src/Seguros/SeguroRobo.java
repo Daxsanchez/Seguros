@@ -14,7 +14,7 @@ public class SeguroRobo extends Seguro {
 
     private int tiempoRobo;//En horas
 
-    public SeguroRobo(int tiempoRobo, String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion,
+    public SeguroRobo(int tiempoRobo, String numPoliza, String fechaInicio, String fechaVencimiento, boolean aplicaSeguro, String descripcion,
             Double precio, Double montoAsegurado) {
         super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion, precio, montoAsegurado);
         this.tiempoRobo = tiempoRobo;
@@ -29,7 +29,7 @@ public class SeguroRobo extends Seguro {
     }
 
     public void informe() {
-        String informe = "El reporte de seguro es el siguiente: " + toString();
+        String informe = "El reporte de seguro es el siguiente:\n" + toString();
         Leer.showDatos(informe);
     }
 

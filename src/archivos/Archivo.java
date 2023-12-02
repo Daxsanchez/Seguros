@@ -7,6 +7,7 @@ import java.io.IOException;
 import Renovaciones.Renovacion;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import leer.Leer;
 
 /**
  *
@@ -63,11 +64,14 @@ public class Archivo {
             BufferedReader buffer = new BufferedReader(leer);
 
             String linea = buffer.readLine();
+            String datos = "";
 
             while (linea != null) {
+                datos += linea + "\n";
                 System.out.println(linea);
                 linea = buffer.readLine();
             }
+            Leer.showDatos(datos);
         } catch (IOException ex) {
             System.out.println("El tipo de excepción es: " + ex.getClass().getSimpleName());
         }

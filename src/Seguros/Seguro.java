@@ -7,19 +7,18 @@ import java.util.Date;
  * @author Dax Sánchez
  */
 //4.1-La clase seguro debe contener número de póliza, fecha de inicio, fecha de vencimiento, aplica seguro, descripción.
-
 public abstract class Seguro {
 
     private String numPoliza;
-    private Date fechaInicio;
-    private Date fechaVencimiento;
+    private String fechaInicio;
+    private String fechaVencimiento;
     private boolean aplicaSeguro;
     private String descripcion;
     private Double precio;
     private Double montoAsegurado; // Monto máximo que pagará la aseguradora
     private final String tipo = this.getClass().getSimpleName();
 
-    public Seguro(String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion, Double precio, Double montoAsegurado) {
+    public Seguro(String numPoliza, String fechaInicio, String fechaVencimiento, boolean aplicaSeguro, String descripcion, Double precio, Double montoAsegurado) {
         this.numPoliza = numPoliza;
         this.fechaInicio = fechaInicio;
         this.fechaVencimiento = fechaVencimiento;
@@ -37,19 +36,19 @@ public abstract class Seguro {
         this.numPoliza = numPoliza;
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaVencimiento() {
+    public String getFechaVencimiento() {
         return fechaVencimiento;
     }
 
-    public void setFechaVencimiento(Date fechaVencimiento) {
+    public void setFechaVencimiento(String fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
 
@@ -94,7 +93,7 @@ public abstract class Seguro {
         sb.append("Número de póliza: ").append(numPoliza).append("\n");
         sb.append("Fecha inicio: ").append(fechaInicio).append("\n");
         sb.append("Fecha vencimiento: ").append(fechaVencimiento).append("\n");
-        sb.append("Aplica el seguro: ").append(aplicaSeguro).append("\n");
+        sb.append("Aplica el seguro: ").append(aplicaSeguro ? "Aplica" : "No aplica").append("\n");
         sb.append("Descripción: ").append(descripcion).append("\n");
         sb.append("Precio: ").append(precio).append("\n");
         sb.append("Monto asegurado: ").append(montoAsegurado).append("\n");

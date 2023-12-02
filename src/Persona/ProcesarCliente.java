@@ -19,6 +19,7 @@ public class ProcesarCliente {
     }
 
     //Función para validar el tipo de cliente
+    //Uso de excepciones propias
     private void validarCliente(Cliente d) {
         try {
             if (d.getClass().equals(ClienteFrecuente.class)) {

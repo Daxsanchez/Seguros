@@ -19,11 +19,11 @@ public class ProcesarEmpleado {
             try {
                 pNum.validarNum(d.getSalario(), true);
             } catch (ExcNumero ex) {
+                //Uso de excepciones propias
                 ex.errorNumNegativo();
                 d.setSalario(Leer.leerDouble("Ingrese un valor positivo: "));
             }
             Leer.showDatos(d.getData());
-            Leer.showDatos(d.calcSueldo() + "");
         }
 
     }

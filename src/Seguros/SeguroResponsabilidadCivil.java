@@ -13,8 +13,8 @@ public class SeguroResponsabilidadCivil extends Seguro {
 
     private String objetosAfectados;
 
-    public SeguroResponsabilidadCivil(String objetosAfectados, String numPoliza, Date fechaInicio,
-            Date fechaVencimiento, boolean aplicaSeguro, String descripcion, Double precio, Double montoAsegurado) {
+    public SeguroResponsabilidadCivil(String objetosAfectados, String numPoliza, String fechaInicio,
+            String fechaVencimiento, boolean aplicaSeguro, String descripcion, Double precio, Double montoAsegurado) {
         super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion, precio, montoAsegurado);
         this.objetosAfectados = objetosAfectados;
     }
@@ -28,7 +28,7 @@ public class SeguroResponsabilidadCivil extends Seguro {
     }
 
     public void informe() {
-        String informe = "El reporte de seguro es el siguiente: " + toString();
+        String informe = "El reporte de seguro es el siguiente:\n" + toString();
         Leer.showDatos(informe);
     }
 

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Persona;
 
 import leer.Leer;
@@ -45,7 +41,7 @@ public class AgenteDeSeguros extends Empleado {
     public String toString() {
         StringBuilder sb = new StringBuilder("Agente De seguros").append("\n");
         sb.append(super.toString()).append("\n");
-        sb.append("Comisión: ").append(comision).append("\n");
+        sb.append("Comisión: ").append((comision) ? "Aplica" : "No aplica").append("\n");
         sb.append("Numero de ventas: ").append(numVentas).append("\n");
         return sb.toString();
     }
@@ -62,18 +58,17 @@ public class AgenteDeSeguros extends Empleado {
         return "Informacion de Agente Seguros: " + toString() + "Sueldo: " + calcSueldo();
     }
 
+    //Si tiene comisión se le agrega un 5% de su salario
     private void calcComision(boolean comision) {
         if (comision) {
-            setSalario(getSalario() + (getSalario() * 0.5));
-            Leer.showDatos(getSalario().toString());
+            setSalario(getSalario() + (getSalario() * 0.05));
         }
-
     }
 
+    //Si el numero de ventas es mayor a 20 se le incrementa 10% de su salsario
     private void calcVenta(int numVentas) {
         if (numVentas > 20) {
             setSalario(getSalario() + (getSalario() * 0.10));
-            Leer.showDatos(getSalario().toString());
         }
     }
 

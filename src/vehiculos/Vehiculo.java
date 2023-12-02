@@ -3,6 +3,7 @@ package vehiculos;
 import archivos.Archivo;
 import archivos.ArchivoBin;
 import java.io.Serializable;
+import leer.Leer;
 
 /**
  *
@@ -16,6 +17,8 @@ public class Vehiculo implements Serializable {
     private String modelo;
     private String color;
     private int age;
+    //Variable para validar en que constructor entró
+    private int constructor = 0;
 
     //Constructor vacío
     public Vehiculo() {
@@ -26,27 +29,30 @@ public class Vehiculo implements Serializable {
         this.age = -1;
     }
 
-    //Vehiculo de tipo grande
+    //Vehiculo de tipo grande 1
     public Vehiculo(String placa, String marca, String modelo, String color, int age) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.age = age;
+        this.constructor = 1;
     }
 
-    //Vehiculo de tipo chico
+    //Vehiculo de tipo chico 2
     public Vehiculo(String placa, String marca, String modelo) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
+        this.constructor = 2;
     }
 
-    //Vehiculo de tipo mediano
+    //Vehiculo de tipo mediano 3
     public Vehiculo(String placa, String color, int age) {
         this.placa = placa;
         this.color = color;
         this.age = age;
+        this.constructor = 3;
     }
 
     public String getPlaca() {
@@ -94,16 +100,25 @@ public class Vehiculo implements Serializable {
         StringBuilder sb = new StringBuilder();
         sb.append("Vehiculo").append("\n");
         sb.append("Placa: ").append(placa).append("\n");
-        sb.append("Marca: ").append(marca).append("\n");
-        sb.append("Modelo: ").append(modelo).append("\n");
-        sb.append("Color: ").append(color).append("\n");
-        sb.append("Año: ").append(age).append("\n");
+        if (constructor == 1) {
+            sb.append("Marca: ").append(marca).append("\n");
+            sb.append("Modelo: ").append(modelo).append("\n");
+            sb.append("Color: ").append(color).append("\n");
+            sb.append("Año: ").append(age).append("\n");
+        } else if (constructor == 2) {
+            sb.append("Marca: ").append(marca).append("\n");
+            sb.append("Modelo: ").append(modelo).append("\n");
+        } else if (constructor == 3) {
+            sb.append("Color: ").append(color).append("\n");
+            sb.append("Año: ").append(age).append("\n");
+        }
         return sb.toString();
     }
 
+    //Solo muestra la placa
     public void obtenerInformacion() {
-        String info = "Información del vehiculo: \nPlaca: " + placa + "\nModelo: " + modelo;
-        System.out.println(info);
+        String info = "Información del vehiculo: \nPlaca: " + placa;
+        Leer.showDatos(info);
     }
 
     // Método sobrecargado para obtener información detallada del vehículo
@@ -111,7 +126,7 @@ public class Vehiculo implements Serializable {
         obtenerInformacion();
 
         if (detallada) {
-            System.out.println("Detalles adicionales:\n" + toString());
+            Leer.showDatos("Detalles adicionales:\n" + toString());
         }
     }
 
@@ -121,7 +136,7 @@ public class Vehiculo implements Serializable {
         archivoBin.agregarVehiculo(this);
     }
 
-    public Vehiculo getVehiculo() {
+    public Vehiculo getVehiculoArchivo() {
         ArchivoBin archivoBin = new ArchivoBin("Vehiculos//Vehiculo_" + this.placa + ".bin");
         return archivoBin.getVehiculoArchivo();
     }

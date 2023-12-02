@@ -12,13 +12,13 @@ import java.util.Date;
 public class RenovacionPlus implements Renovacion {
 
     private String numRenovacion;
-    private Date fechaRenovacion;
+    private String fechaRenovacion;
     private int duracion = 5;//En años
     private Seguro seguro;
     private String formaDePago;
     private Cliente cliente;
 
-    public RenovacionPlus(String numRenovacion, Date fechaRenovacion, Seguro seguro, String formaDePago, Cliente cliente) {
+    public RenovacionPlus(String numRenovacion, String fechaRenovacion, Seguro seguro, String formaDePago, Cliente cliente) {
         this.numRenovacion = numRenovacion;
         this.fechaRenovacion = fechaRenovacion;
         this.seguro = seguro;
@@ -34,11 +34,11 @@ public class RenovacionPlus implements Renovacion {
         this.numRenovacion = numRenovacion;
     }
 
-    public Date getFechaRenovacion() {
+    public String getFechaRenovacion() {
         return fechaRenovacion;
     }
 
-    public void setFechaRenovacion(Date fechaRenovacion) {
+    public void setFechaRenovacion(String fechaRenovacion) {
         this.fechaRenovacion = fechaRenovacion;
     }
 
@@ -85,12 +85,11 @@ public class RenovacionPlus implements Renovacion {
         sb.append("Seguro: ").append(seguro.toString()).append("\n");
         sb.append("Forma de pago: ").append(formaDePago).append("\n");
         sb.append("Cliente: ").append(cliente.toString()).append("\n");
-        sb.append('}');
         return sb.toString();
     }
 
     @Override
-    public void getArchivoRenovacion() {
+    public void showArchivoRenovacion() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;
         Archivo archivo = new Archivo(formatoNombre, "Renovaciones Plus");
         archivo.leerArchivo();

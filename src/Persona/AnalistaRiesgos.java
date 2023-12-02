@@ -40,7 +40,7 @@ public class AnalistaRiesgos extends Empleado {
 
     @Override
     public String getData() {
-        return "Informacion de Agente Seguros: " + toString() + "Sueldo: " + calcSueldo();
+        return "Informacion de Agente Seguros: " + toString() + "\nSueldo: " + calcSueldo();
     }
 
     private void calcProduc(int productividad) {

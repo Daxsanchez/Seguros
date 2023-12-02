@@ -49,8 +49,7 @@ public abstract class Empleado extends Persona {
         StringBuilder sb = new StringBuilder("Empleado:\n");
         sb.append(super.toString());
         sb.append("Id: ").append(id).append("\n");
-        sb.append("Puesto: ").append(puesto).append("\n");
-        sb.append("Salario: ").append(salario).append("\n");
+        sb.append("Puesto: ").append(puesto);
         return sb.toString();
     }
     

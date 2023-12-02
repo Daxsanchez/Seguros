@@ -12,7 +12,7 @@ public class SeguroColision extends Seguro {
 
     private int gravedad;
 
-    public SeguroColision(int gravedad, String numPoliza, Date fechaInicio, Date fechaVencimiento, boolean aplicaSeguro, String descripcion,
+    public SeguroColision(int gravedad, String numPoliza, String fechaInicio, String fechaVencimiento, boolean aplicaSeguro, String descripcion,
             Double precio, Double montoAsegurado) {
         super(numPoliza, fechaInicio, fechaVencimiento, aplicaSeguro, descripcion, precio, montoAsegurado);
         this.gravedad = gravedad;
@@ -27,7 +27,7 @@ public class SeguroColision extends Seguro {
     }
 
     public void informe() {
-        String informe = "El reporte de seguro es el siguiente: " + toString();
+        String informe = "El reporte de seguro es el siguiente:\n" + toString();
         Leer.showDatos(informe);
     }
 
