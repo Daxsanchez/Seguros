@@ -5,7 +5,7 @@ package excepciones;
  * @author Dax Sánchez
  */
 public class ProcesarNumero {
-
+      //7.1
     //Si el booleano es true entonces es un Double
     //Si el booleano es falso entonces es un Int 
     public void validarNum(Number num, boolean tipo) throws ExcNumero {

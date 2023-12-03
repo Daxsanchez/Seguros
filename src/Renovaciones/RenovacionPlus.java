@@ -67,6 +67,7 @@ public class RenovacionPlus implements Renovacion {
     }
 
     //Este médoto genera una renovación de tipo plus y genera un archivo de texto con la información de la renovación
+    //9.1
     @Override
     public double renovar() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;
@@ -89,6 +90,7 @@ public class RenovacionPlus implements Renovacion {
     }
 
     @Override
+    //9.1
     public void showArchivoRenovacion() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;
         Archivo archivo = new Archivo(formatoNombre, "Renovaciones Plus");

@@ -12,9 +12,7 @@ import vehiculos.Vehiculo;
  * @author Dax Sánchez
  */
 
-  /* 1.1 Considere una clase de venta que cubra el registro de cada venta.
-    Cada venta lleva número de póliza, fecha de venta, cliente,
-     vehículo asegurado, monto asegurado, prima y deducible.*/
+  //1.1 
 public class Venta {
 
     private int numPoliza;

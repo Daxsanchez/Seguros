@@ -9,7 +9,7 @@ package excepciones;
  * @author rafae
  */
 public class ExcClienteNuevo extends Exception {
-
+    //7.2
     @Override
     public String getMessage() {
         return "El tipo de cliente Nuevo no es mayor a 5 años";

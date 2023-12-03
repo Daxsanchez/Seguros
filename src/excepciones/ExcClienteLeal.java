@@ -9,7 +9,7 @@ package excepciones;
  * @author rafae
  */
 public class ExcClienteLeal extends Exception {
-
+    //7.2
     @Override
     public String getMessage() {
         return "Este tipo de cliente está por arribe de los 10 años de antiguedad";

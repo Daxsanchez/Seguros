@@ -5,7 +5,7 @@ package Persona;
  * @author rafae
  */
 
-//2.1-El tipo de cliente se define o selecciona por su antigüedad
+//2.1-El tipo de cliente se define o selecciona por su antiguedad
 public abstract class Cliente extends Persona {
 
     private int antiguedad;

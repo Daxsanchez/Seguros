@@ -20,7 +20,7 @@ public class Vehiculo implements Serializable {
     //Variable para validar en que constructor entró
     private int constructor = 0;
 
-    //Constructor vacío
+    //5.1 Constructor vacío
     public Vehiculo() {
         this.placa = "Por definir";
         this.marca = "Por definir";
@@ -29,6 +29,7 @@ public class Vehiculo implements Serializable {
         this.age = -1;
     }
 
+    //5.2
     //Vehiculo de tipo grande 1
     public Vehiculo(String placa, String marca, String modelo, String color, int age) {
         this.placa = placa;
@@ -38,6 +39,7 @@ public class Vehiculo implements Serializable {
         this.age = age;
         this.constructor = 1;
     }
+    //5.3
 
     //Vehiculo de tipo chico 2
     public Vehiculo(String placa, String marca, String modelo) {
@@ -47,7 +49,7 @@ public class Vehiculo implements Serializable {
         this.constructor = 2;
     }
 
-    //Vehiculo de tipo mediano 3
+    //5.4 Vehiculo de tipo mediano 3
     public Vehiculo(String placa, String color, int age) {
         this.placa = placa;
         this.color = color;
@@ -114,8 +116,9 @@ public class Vehiculo implements Serializable {
         }
         return sb.toString();
     }
-
+//5.4
     //Solo muestra la placa
+
     public void obtenerInformacion() {
         String info = "Información del vehiculo: \nPlaca: " + placa;
         Leer.showDatos(info);
@@ -129,12 +132,14 @@ public class Vehiculo implements Serializable {
             Leer.showDatos("Detalles adicionales:\n" + toString());
         }
     }
+//5.5
 
     public void guardarArchivoVehiculo() {
         new Archivo(null, "Vehiculos");//Crea carpeta ventas si no existe, se manda un null en el primer parámetro para que no creé un archivo
         ArchivoBin archivoBin = new ArchivoBin("Vehiculos//Vehiculo_" + this.placa + ".bin");
         archivoBin.agregarVehiculo(this);
     }
+//5.6
 
     public Vehiculo getVehiculoArchivo() {
         ArchivoBin archivoBin = new ArchivoBin("Vehiculos//Vehiculo_" + this.placa + ".bin");

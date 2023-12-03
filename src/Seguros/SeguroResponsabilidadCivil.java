@@ -7,7 +7,7 @@ import leer.Leer;
  *
  * @author Dax Sánchez
  */
-//4.2 Seguro de responsabilidad civil(a terceros).  Objetos dañados.
+//4.1 Seguro de responsabilidad civil(a terceros).  Objetos dañados.
 
 public class SeguroResponsabilidadCivil extends Seguro {
 

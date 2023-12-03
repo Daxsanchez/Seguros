@@ -64,6 +64,7 @@ public class RenovacionEstandar implements Renovacion {
     }
 
     //Este médoto genera una renovación de tipo estándar y genera un archivo de texto con la información de la renovación
+    //9.1
     @Override
     public double renovar() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;
@@ -84,7 +85,9 @@ public class RenovacionEstandar implements Renovacion {
         return sb.toString();
     }
 
+    //
     //Obtiene el archivo de la renovación
+    //9.1
     @Override
     public void showArchivoRenovacion() {
         String formatoNombre = "Renovacion_" + this.numRenovacion;

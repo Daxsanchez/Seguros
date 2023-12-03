@@ -6,7 +6,7 @@ import leer.Leer;
  *
  * @author rafae
  */
-  //2.2-El cliente nuevo tiene 0 años de antigüedad,cuenta con nombre,número de teléfono y apellidos,
+  //2.2-El cliente nuevo tiene 0 años de antigüedad,cuenta con nombre,número de teléfono y apellidos
 
 public class ClienteNuevo extends Cliente {
 

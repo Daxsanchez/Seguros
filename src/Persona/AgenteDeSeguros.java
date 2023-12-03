@@ -7,9 +7,7 @@ import leer.Leer;
  * @author rafae
  */
 
-/*3.2- Se desea conocer las ventas realizadas y comisiones ganadas. Si se gana la comisión 
-por puntualidad se le incrementará un 5% más su sueldo base. Si realizó más de 20 ventas en
-un mes se llevará un 10% más de sueldo base.*/
+//3.1
 public class AgenteDeSeguros extends Empleado {
 
     private boolean comision;
