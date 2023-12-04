@@ -59,6 +59,7 @@ public class Archivo {
     }
 
     public void leerArchivo() {
+        
         try {
             FileReader leer = new FileReader(this.archivo);
             BufferedReader buffer = new BufferedReader(leer);

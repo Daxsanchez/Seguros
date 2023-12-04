@@ -1,0 +1,26 @@
+Renovacion plus:
+Número de renovacion: 952
+Fecha de renovación: 01-12-2023
+Duración: 5
+Seguro: Seguro SeguroResponsabilidadCivil :
+Número de póliza: 0124321
+Fecha inicio: 01-12-2023
+Fecha vencimiento: 30-11-2025
+Aplica el seguro: No aplica
+Descripción: Seguro contra daños a terceros
+Precio: 10000.0
+Monto asegurado: 150000.0
+Objetos afectados: Auto y pavimento
+
+Forma de pago: Tarjeta
+Cliente: Cliente Nuevo
+Cliente: 
+Antiguedad: 3
+Persona: 
+Nombre: Juan
+Apellidos: Sánchez
+Número de Teléfono: 31135643
+
+
+
+

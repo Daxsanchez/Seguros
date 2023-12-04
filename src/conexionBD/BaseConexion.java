@@ -5,10 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import leer.Leer;
 
-/**
- *
- * @author Código Lite - https://codigolite.com
- */
+//6.1-6.2
 public class BaseConexion {
 
     public static Connection cns = null;

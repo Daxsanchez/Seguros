@@ -6,11 +6,11 @@ public class Main {
         Funcionalidad funcionalidad = new Funcionalidad();
         
         //funcionalidad.funcionesCliente();
-        //funcionalidad.funcionesEmpleado();
+        funcionalidad.funcionesEmpleado();
         //funcionalidad.funcionesRenovaciones();
         //funcionalidad.funcionesSeguros();
         //funcionalidad.funcionesVehiculo();
-        funcionalidad.funcionesVentas();
+       // funcionalidad.funcionesVentas();
     }
 
 }

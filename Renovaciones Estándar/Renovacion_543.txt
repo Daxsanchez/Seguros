@@ -1,0 +1,16 @@
+Renovacion estándar:
+Número de renovación: 543
+Fecha de renovación: 01-12-2023
+Duración: 1
+Seguro: Seguro SeguroColision :
+Número de póliza: 10014313
+Fecha inicio: 01-12-2023
+Fecha vencimiento: 05-07-2026
+Aplica el seguro: Aplica
+Descripción: Seguro contra daños de colisión
+Precio: 9000.0
+Monto asegurado: 100000.0
+Gravedad: 5
+
+Forma de pago:Efectivo
+
