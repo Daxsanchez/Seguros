@@ -11,9 +11,12 @@ import leer.Leer;
 public class ClienteLeal extends Cliente {
 
     private static boolean mensajeMostrado = false;
-
-    public ClienteLeal(String nombre, String apellido, String numTelefonon, int antiguedad) {
+    private  char genero;
+    private String correo;
+    public ClienteLeal(String nombre, String apellido, String numTelefonon, int antiguedad,char genero,String correo) {
         super(nombre, apellido, numTelefonon, antiguedad);
+        this.genero=genero;
+        this.correo=correo;
         if (!mensajeMostrado) {
             Leer.showDatos("====El TIPO CLIENTE LEAL ES MAYOR A 10 AÑOS==");
             mensajeMostrado = true;
@@ -22,10 +25,13 @@ public class ClienteLeal extends Cliente {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Cliente Leal").append("\n");
-        sb.append(super.toString());
+        StringBuilder sb = new StringBuilder("Cliente Leal: ").append("\n");
+        sb.append(super.toString()).append("\n");
+        sb.append("Género: ").append(genero).append("\n");
+        sb.append("Correo Eléctronico: ").append(correo).append("\n");
         return sb.toString();
     }
+
 
     @Override
     public String getData() {

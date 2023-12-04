@@ -27,21 +27,21 @@ import ventas.Venta;
  * @author Dax Sánchez
  */
 public class Funcionalidad {
-    
+
     public void funcionesCliente() {
         ProcesarCliente procesarCliente = new ProcesarCliente();
-        
+
         Cliente[] clientes = clientes();
         procesarCliente.showClientes(clientes);
     }
-    
+
     public void funcionesEmpleado() {
         ProcesarEmpleado p = new ProcesarEmpleado();
         Empleado[] empleados = empleados();
         p.mostrarEmpleado(empleados);
-        
+
     }
-    
+
     public void funcionesVehiculo() {
         //Sobrecarga de métodos
         Vehiculo[] vehiculos = vehiculos();
@@ -74,7 +74,7 @@ public class Funcionalidad {
                 + " es: " + precioRenovacion);
         renovaciones[1].showArchivoRenovacion();
     }
-    
+
     public void funcionesVentas() {
         ProcesarVenta procesarVenta = new ProcesarVenta();
         Venta[] ventas = ventas();
@@ -84,7 +84,7 @@ public class Funcionalidad {
         //Solo se llamará a este método cuando haya un accidente en todas las ventas
         procesarVenta.totalPagoAseguradora(ventas);
     }
-    
+
     private Empleado[] empleados() {
         Empleado[] empleados = new Empleado[3];
         empleados[0] = new AgenteDeSeguros(true, 300, 2134142, "Superior", 12000.00, "Arturo", "Bañuelos", "311-424-221");
@@ -92,7 +92,7 @@ public class Funcionalidad {
         empleados[2] = new AgenteDeSeguros(false, 100, 55235225, "Nuevo", -7000.00, "Samuel", "Gomez", "311-534-821");
         return empleados;
     }
-    
+
     private Seguro[] seguros() {
         Seguro[] seguros = new Seguro[3];
         seguros[0] = new SeguroColision(5, "10014313", "01-12-2023", "05-07-2026", true,
@@ -103,7 +103,7 @@ public class Funcionalidad {
                 "Seguro contra robo", 6000.0, 50000.0);
         return seguros;
     }
-    
+
     private Renovacion[] renovaciones() {
         Renovacion[] renovaciones = new Renovacion[3];
         Seguro[] seguros = seguros();
@@ -113,16 +113,16 @@ public class Funcionalidad {
         renovaciones[2] = new RenovacionPlus("368", "01-12-2023", seguros[2], "Transferencia", clientes[1]);
         return renovaciones;
     }
-    
+
     private Cliente[] clientes() {
         Cliente[] clientes = new Cliente[3];
-        clientes[0] = new ClienteNuevo("Juan", "Sánchez", "31135643", 3);
+        clientes[0] = new ClienteNuevo("Juan", "Sánchez", "311-356-2443", 3);
         //Cliente con una antigüedad no correcta para generar error
-        clientes[1] = new ClienteFrecuente("Pedro", "López", "31134354", 2);
-        clientes[2] = new ClienteLeal("Edgar", "Hernández", "311354565", 15);
+        clientes[1] = new ClienteFrecuente("Pedro", "López", "311-343-3254", 2);
+        clientes[2] = new ClienteLeal("Edgar ", "Soto", "311-354-2323", 11, 'M', "edgsoto@gmail.com");
         return clientes;
     }
-    
+
     private Vehiculo[] vehiculos() {
         //Sobrecarga de constructores
         Vehiculo[] vehiculos = new Vehiculo[3];
@@ -131,18 +131,18 @@ public class Funcionalidad {
         vehiculos[2] = new Vehiculo("PDA-GR3-G41", "suzuki", "FRONX BOOSTERGREEN ", "Rojo", 2012);
         return vehiculos;
     }
-    
+
     private Venta[] ventas() {
         Venta[] ventas = new Venta[3];
         Cliente[] clientes = clientes();
         Empleado[] empleados = empleados();
         Vehiculo[] vehiculos = vehiculos();
         Seguro[] seguros = seguros();
-        
+
         ventas[0] = new Venta(4023, new Date(), clientes[0], empleados[0], vehiculos[0], 9000.0, seguros[0]);
         ventas[1] = new Venta(5354, new Date(), clientes[1], empleados[1], vehiculos[1], 11000.0, seguros[1]);
         ventas[2] = new Venta(8756, new Date(), clientes[2], empleados[2], vehiculos[2], 6000.0, seguros[2]);
-        
+
         return ventas;
     }
 }
